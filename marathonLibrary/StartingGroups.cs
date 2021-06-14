@@ -12,11 +12,16 @@ namespace marathonLibrary
     {
         private IMarathonConfiguration marathonConfiguration;
         private IMarathonGroups marathonGroups;
+        private IChangeGroupHistory changeGroupHistoryList;
 
-        public StartingGroups(IMarathonConfiguration marathonConfiguration, IMarathonGroups marathonGroups)
+        public StartingGroups(
+            IMarathonConfiguration marathonConfiguration,
+            IMarathonGroups marathonGroups,
+            IChangeGroupHistory listChangeGroup)
         {
             this.marathonConfiguration = marathonConfiguration;
             this.marathonGroups = marathonGroups;
+            this.changeGroupHistoryList = listChangeGroup;
         }
 
         public bool Change_CheckDeadline(int marathon_id)
@@ -34,6 +39,17 @@ namespace marathonLibrary
                 return true;
             else
                 return false;
+        }
+
+        public bool Change_CheckHistoryChangeGroupFoParticipant(int participantId)
+        {
+             return !changeGroupHistoryList.GetListOfChangeGroup(participantId).Any();
+        }
+
+        public bool Change_CheckDistanceOfTargetGroup(int sourceGroup, int targetGroup)
+        {
+            return marathonGroups.GetDistanceFromGroup(targetGroup)
+                                 .Any(x => x.distance_id == );
         }
     }
 }

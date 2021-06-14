@@ -13,12 +13,17 @@ namespace marathonLibrary.Tests
         private IStartingGroups startingGroups;
         private IMarathonConfiguration configurationmarathon;
         private IMarathonGroups marathonGroups;
+        private IChangeGroupHistory changeGroupHistory;
 
         public MSTest_ChangeGroups()
         {
             configurationmarathon = new FakeConfiguration();
             marathonGroups = new FakeGroups();
-            startingGroups = new StartingGroups(configurationmarathon, marathonGroups);
+            changeGroupHistory = new Fake_ChangeHistory();
+            startingGroups = new StartingGroups(
+                                                configurationmarathon,
+                                                marathonGroups,
+                                                changeGroupHistory);
         }
 
         [TestMethod]
@@ -62,8 +67,40 @@ namespace marathonLibrary.Tests
             //then
             Assert.IsFalse(result);
         }
+        [TestMethod]
+        public void ShouldChangeGroup_ParticipantDidNotChangeGroupBefore_ReturnTrue()
+        {
+            //given
+            int participantId = 3;
+            
+            //when
+           bool result = startingGroups.Change_CheckHistoryChangeGroupFoParticipant(participantId);
+            //then
+            Assert.IsTrue(result);
+        }
 
-        
+        [TestMethod]
+        public void ShouldNotChangeGroup_ParticipantDidNotChangeGroupBefore_ReturnFalse()
+        {
+            //given
+            int participantId = 1;
+
+            //when
+            bool result = startingGroups.Change_CheckHistoryChangeGroupFoParticipant(participantId);
+            //then
+            Assert.IsFalse(result);
+        }
+
+        [TestMethod]
+        public void ShouldNotChangeGroup_TargetGroupHaveTheSameDistance()
+        {
+            //given
+            int sourceGroupId = 1;
+            int targetGroupId = 2;
+            //when
+            bool result = startingGroups.Change_CheckDistanceOfTargetGroup(sourceGroupId,targetGroupId);
+            //then
+        }
 
     }
 }

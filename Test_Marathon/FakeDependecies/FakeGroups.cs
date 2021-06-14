@@ -16,5 +16,13 @@ namespace Test_Marathon.FakeDependecies
             else
                 return 0;
         }
+
+        public int GetDistanceFromGroup(int groupId)
+        {
+            if(groupId == 1)
+                return 1;
+            else
+                return 2;
+        }
     }
 }

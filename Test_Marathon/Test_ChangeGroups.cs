@@ -42,6 +42,29 @@ namespace marathonLibrary.Tests
             //then
             Assert.IsFalse(result);
         }
+        [TestMethod]
+        public void ShouldChangeGroup_GroupHaveFreeSpace_ReturnTrue()
+        {
+            //given
+            int groupId = 1;
+            //when
+            bool result = startingGroups.Change_CheckFreeSpaceInStartingGroup(groupId);
+            //then
+            Assert.IsTrue(result);
+        }
+        [TestMethod]
+        public void ShouldNotChangeGroup_GroupHaveNotFreeSpace_ReturnFalse()
+        {
+            //given
+            int groupId = 0;
+            //when
+            bool result = startingGroups.Change_CheckFreeSpaceInStartingGroup(groupId);
+            //then
+            Assert.IsFalse(result);
+        }
+
+        
+
     }
 }
 

@@ -26,5 +26,14 @@ namespace marathonLibrary
                 return false;
            return true;
         }
+
+        public bool Change_CheckFreeSpaceInStartingGroup(int group_id)
+        {
+           int freeSpace = marathonGroups.CheckGroupFreeSpace(group_id);
+            if (freeSpace > 0)
+                return true;
+            else
+                return false;
+        }
     }
 }

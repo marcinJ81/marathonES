@@ -11,6 +11,7 @@ namespace marathonLibrary.Groups
         public int group_id { get; private set; }
         private int group_freeSpace;
         public bool group_Closed { get; private set; }
+        
 
         public MarathonGroups(int id, int freeSpace, bool close)
         {
@@ -22,5 +23,7 @@ namespace marathonLibrary.Groups
         {
             return this.group_freeSpace;
         }
+
+       
     }
 }

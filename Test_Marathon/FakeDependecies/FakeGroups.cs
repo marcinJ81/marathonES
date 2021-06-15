@@ -39,10 +39,11 @@ namespace Test_Marathon.FakeDependecies
         {
             return marathonGroups.Where(x => x.group_id == groupId).First();
         }
-
-        List<MarathonGroup> IMarathonGroups.marathonGroups()
+        public List<MarathonGroup> marathonGroupsIsGenerated(int marathon_id)
         {
-            return marathonGroups;
+            if(marathon_id == 1)
+                return marathonGroups;
+            return new List<MarathonGroup>();
         }
     }
 }

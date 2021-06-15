@@ -53,9 +53,9 @@ namespace marathonLibrary
             return false;  
         }
 
-        public bool Change_CheckGenerateGroups()
+        public bool Change_CheckGenerateGroups(int marathon_id)
         {
-            return false;
+            return marathonGroups.marathonGroupsIsGenerated(marathon_id).Any(); 
         }
     }
 }

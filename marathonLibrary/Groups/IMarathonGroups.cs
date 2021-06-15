@@ -7,7 +7,7 @@ namespace marathonLibrary.Groups
         int CheckGroupFreeSpace(int groupId);
         int GetDistanceFromGroup(int groupId);
         public MarathonGroup GetMarathonGroup(int groupId);
-        public List<MarathonGroup> marathonGroups();
+        public List<MarathonGroup> marathonGroupsIsGenerated(int marathon_id);
     }
 
     public class MarathonGroups : IMarathonGroups
@@ -27,7 +27,7 @@ namespace marathonLibrary.Groups
             throw new System.NotImplementedException();
         }
 
-        public List<MarathonGroup> marathonGroups()
+        public List<MarathonGroup> marathonGroupsIsGenerated(int marathon_id)
         {
             throw new System.NotImplementedException();
         }

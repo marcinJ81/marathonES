@@ -114,6 +114,29 @@ namespace marathonLibrary.Tests
             Assert.IsFalse(result);
         }
 
+        [TestMethod]
+        public void ShouldChangeGroup_GroupsHaveBeenGenerate_ReturnTrue()
+        {
+            //given
+            int marathon_id = 1;
+            //when
+            bool result = startingGroups.Change_CheckGenerateGroups(marathon_id);
+            //then
+            Assert.IsTrue(result);
+        }
+
+        [TestMethod]
+        public void ShouldNotChangeGroup_GroupsHaveNotBeenGenerate_ReturnFalse()
+        {
+            //given
+            int marathon_id = 2;
+            //when
+            bool result = startingGroups.Change_CheckGenerateGroups(marathon_id);
+            //then
+            Assert.IsFalse(result);
+        }
+
+
 
     }
 }

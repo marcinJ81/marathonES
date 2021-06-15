@@ -9,20 +9,40 @@ namespace Test_Marathon.FakeDependecies
 {
     public class FakeGroups : IMarathonGroups
     {
+        private List<MarathonGroup> marathonGroups { get; set; }
+
+        public FakeGroups()
+        {
+            marathonGroups = new List<MarathonGroup>()
+            {
+                new MarathonGroup(1,1,false,1),
+                new MarathonGroup(2,0,true,1),
+                new MarathonGroup(3,1,false,2),
+                new MarathonGroup(4,2,false,2)
+            };
+        }
         public int CheckGroupFreeSpace(int group_id)
         {
-            if (group_id == 1)
-                return 1;
-            else
-                return 0;
+            return marathonGroups.Where(x => x.group_id == group_id)
+                                 .FirstOrDefault()
+                                 .group_freeSpace;
         }
 
         public int GetDistanceFromGroup(int groupId)
         {
-            if(groupId == 1)
-                return 1;
-            else
-                return 2;
+            return marathonGroups.Where(x => x.group_id == groupId)
+                                  .FirstOrDefault()
+                                  .distance_id;
+        }
+
+        public MarathonGroup GetMarathonGroup(int groupId)
+        {
+            return marathonGroups.Where(x => x.group_id == groupId).First();
+        }
+
+        List<MarathonGroup> IMarathonGroups.marathonGroups()
+        {
+            return marathonGroups;
         }
     }
 }

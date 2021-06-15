@@ -61,7 +61,7 @@ namespace marathonLibrary.Tests
         public void ShouldNotChangeGroup_GroupHaveNotFreeSpace_ReturnFalse()
         {
             //given
-            int groupId = 0;
+            int groupId = 2;
             //when
             bool result = startingGroups.Change_CheckFreeSpaceInStartingGroup(groupId);
             //then
@@ -92,7 +92,7 @@ namespace marathonLibrary.Tests
         }
 
         [TestMethod]
-        public void ShouldNotChangeGroup_TargetGroupHaveTheSameDistance()
+        public void ShouldChangeGroup_TargetGroupHaveTheSameDistance_ReturnTrue()
         {
             //given
             int sourceGroupId = 1;
@@ -100,7 +100,20 @@ namespace marathonLibrary.Tests
             //when
             bool result = startingGroups.Change_CheckDistanceOfTargetGroup(sourceGroupId,targetGroupId);
             //then
+            Assert.IsTrue(result);
         }
+        [TestMethod]
+        public void ShouldNotChangeGroup_TargetGroupHaveNotTheSameDistance_ReturnFalse()
+        {
+            //given
+            int sourceGroupId = 1;
+            int targetGroupId = 3;
+            //when
+            bool result = startingGroups.Change_CheckDistanceOfTargetGroup(sourceGroupId, targetGroupId);
+            //then
+            Assert.IsFalse(result);
+        }
+
 
     }
 }

@@ -46,10 +46,16 @@ namespace marathonLibrary
              return !changeGroupHistoryList.GetListOfChangeGroup(participantId).Any();
         }
 
-        public bool Change_CheckDistanceOfTargetGroup(int sourceGroup, int targetGroup)
+        public bool Change_CheckDistanceOfTargetGroup(int idSourceGroup, int idTargetGroup)
         {
-            return marathonGroups.GetDistanceFromGroup(targetGroup)
-                                 .Any(x => x.distance_id == );
+            if( marathonGroups.GetDistanceFromGroup(idSourceGroup) == marathonGroups.GetDistanceFromGroup(idTargetGroup))
+                return true;
+            return false;  
+        }
+
+        public bool Change_CheckGenerateGroups()
+        {
+            return false;
         }
     }
 }

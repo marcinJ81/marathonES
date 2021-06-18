@@ -5,7 +5,7 @@ This project is an exercise based on a DNA course.
 -  [Jakub Wiacek](https://www.linkedin.com/in/jakub-wi%C4%85cek-512551b6/ "Jakub Wiacek")
 -  [Tomasz Szlek](https://www.linkedin.com/in/tomasz-szlek-275653169/ "Tomasz Szlek")
 -  [Dawid Perdek](https://www.linkedin.com/in/perdekdawid/ "Dawid Perdek")
--  [Marcin Juranek](https://ismartdev.pl "Marcin Juranek")
+-  [Marcin Juranek](https://ismartdev.pl "Marcin Juranek") - author of this code
 
 ### Bounded  context *Generating Starting Groups*
 

@@ -80,7 +80,7 @@ namespace marathonLibrary.Tests
         }
 
         [TestMethod]
-        public void ShouldNotChangeGroup_ParticipantDidNotChangeGroupBefore_ReturnFalse()
+        public void ShouldNotChangeGroup_ParticipantDidChangeGroupBefore_ReturnFalse()
         {
             //given
             int participantId = 1;

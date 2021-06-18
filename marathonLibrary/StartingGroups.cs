@@ -52,7 +52,6 @@ namespace marathonLibrary
                 return true;
             return false;  
         }
-
         public bool Change_CheckGenerateGroups(int marathon_id)
         {
             return marathonGroups.marathonGroupsIsGenerated(marathon_id).Any(); 

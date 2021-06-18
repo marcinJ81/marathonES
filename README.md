@@ -2,8 +2,8 @@
 This project is an exercise based on a DNA course.
 [Description of the task](https://ismartdev.pl/dna-zadania/esdl/)
 ### Authors of Event Storming Design Level :
--  [Jakub Wi¹cek](https://www.linkedin.com/in/jakub-wi%C4%85cek-512551b6/ "Jakub Wiacek")
--  [Tomasz Szlêk](https://www.linkedin.com/in/tomasz-szlek-275653169/ "Tomasz Szlek")
+-  [Jakub Wiacek](https://www.linkedin.com/in/jakub-wi%C4%85cek-512551b6/ "Jakub Wiacek")
+-  [Tomasz Szlek](https://www.linkedin.com/in/tomasz-szlek-275653169/ "Tomasz Szlek")
 -  [Dawid Perdek](https://www.linkedin.com/in/perdekdawid/ "Dawid Perdek")
 -  [Marcin Juranek](https://ismartdev.pl "Marcin Juranek")
 

@@ -2,6 +2,7 @@
 {
     public interface IDomainResult
     {
-        string StartingGroupHasChange(bool param);
+        IDomainResult StartingGroupHasChange();
+        IDomainResult StartingGroupHasNotChange();
     }
 }

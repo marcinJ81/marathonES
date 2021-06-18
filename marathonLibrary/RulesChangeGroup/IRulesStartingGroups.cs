@@ -1,6 +1,6 @@
 ﻿namespace marathonLibrary
 {
-    public interface IStartingGroups
+    public interface IRulesStartingGroups
     {
         bool Change_CheckDeadline(int marathon_id);
         bool Change_CheckFreeSpaceInStartingGroup(int group_id);

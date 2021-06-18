@@ -8,13 +8,13 @@ using System.Threading.Tasks;
 
 namespace marathonLibrary
 {
-    public class StartingGroups : IStartingGroups
+    public class RulesStartingGroups : IRulesStartingGroups
     {
         private IMarathonConfiguration marathonConfiguration;
         private IMarathonGroups marathonGroups;
         private IChangeGroupHistory changeGroupHistoryList;
 
-        public StartingGroups(
+        public RulesStartingGroups(
             IMarathonConfiguration marathonConfiguration,
             IMarathonGroups marathonGroups,
             IChangeGroupHistory listChangeGroup)

@@ -10,7 +10,7 @@ namespace marathonLibrary.Tests
     [TestClass]
     public class MSTest_ChangeGroups
     {
-        private IStartingGroups startingGroups;
+        private IRulesStartingGroups startingGroups;
         private IMarathonConfiguration configurationmarathon;
         private IMarathonGroups marathonGroups;
         private IChangeGroupHistory changeGroupHistory;
@@ -20,7 +20,7 @@ namespace marathonLibrary.Tests
             configurationmarathon = new FakeConfiguration();
             marathonGroups = new FakeGroups();
             changeGroupHistory = new Fake_ChangeHistory();
-            startingGroups = new StartingGroups(
+            startingGroups = new RulesStartingGroups(
                                                 configurationmarathon,
                                                 marathonGroups,
                                                 changeGroupHistory);

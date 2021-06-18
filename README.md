@@ -2,14 +2,14 @@
 This project is an exercise based on a DNA course.
 [Description of the task](https://ismartdev.pl/dna-zadania/esdl/)
 ### Authors of Event Storming Design Level :
--  [Jakub Wi¹cek](https://www.linkedin.com/in/jakub-wi%C4%85cek-512551b6/ "Jakub Wi¹cek")
--  [Tomasz Szlêk](https://www.linkedin.com/in/tomasz-szlek-275653169/ "Tomasz Szlêk")
+-  [Jakub Wi¹cek](https://www.linkedin.com/in/jakub-wi%C4%85cek-512551b6/ "Jakub Wiacek")
+-  [Tomasz Szlêk](https://www.linkedin.com/in/tomasz-szlek-275653169/ "Tomasz Szlek")
 -  [Dawid Perdek](https://www.linkedin.com/in/perdekdawid/ "Dawid Perdek")
 -  [Marcin Juranek](https://ismartdev.pl "Marcin Juranek")
 
 ### Bounded  context *Generating Starting Groups*
 
-####Event Change Group
+#### Event Change Group
 **Rules:**
 - Deadline  for generating groups not exceeded
 - Target group have free places
@@ -19,7 +19,7 @@ This project is an exercise based on a DNA course.
 
 [![](https://github.com/marcinJ81/marathonES/blob/master/images/change_group.jpg)](https://github.com/marcinJ81/marathonES/blob/master/images/change_group.jpg "Change Group")
 
-####Event Generating Starting Groups
+#### Event Generating Starting Groups
 **Rules:**
 - Starting groups no yet generated
 - There are at least X participants with starting numbers
